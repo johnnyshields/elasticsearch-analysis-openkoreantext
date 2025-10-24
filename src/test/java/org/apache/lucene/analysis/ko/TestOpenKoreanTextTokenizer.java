@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
+import java.net.URI;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,13 +61,13 @@ public class TestOpenKoreanTextTokenizer {
     }
 
     @Test
-    public void testUserDictionaryFromURL() throws IOException {
+    public void testUserDictionaryFromURL() throws Exception {
         String text = "안비빈비빔밥은 맛있다";
         String[] expected = new String[]{"안비빈비빔밥", "은", " ", "맛있다"};
 
         OpenKoreanTextTokenizer tokenizer = new OpenKoreanTextTokenizer();
 
-        URL url = new URL("https://raw.githubusercontent.com/open-korean-text/elasticsearch-analysis-openkoreantext/master/src/test/resources/httpdictionary");
+        URL url = URI.create("https://raw.githubusercontent.com/open-korean-text/elasticsearch-analysis-openkoreantext/master/src/test/resources/httpdictionary").toURL();
         UserDictionaryLoader.addUserDictionary(url);
 
         tokenizer.setReader(new StringReader(text));
