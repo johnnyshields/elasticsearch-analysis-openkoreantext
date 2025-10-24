@@ -57,6 +57,7 @@ task buildPluginZip(type: Zip, dependsOn: [':jar', ':makePluginDescriptor']) {
     from jar.archiveFile
     from 'build/tmp/plugin'
     into '.'
+    archiveBaseName = 'elasticsearch-analysis-openkoreantext'
     archiveClassifier = 'plugin'
 }
 
