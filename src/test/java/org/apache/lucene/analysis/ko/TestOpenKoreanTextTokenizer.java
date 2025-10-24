@@ -9,8 +9,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OpenKoreanTextTokenizerTest {
-
+public class TestOpenKoreanTextTokenizer {
     @Test
     public void testTokenizer() throws IOException {
         String text = "한국어를 처리하는 예시입니다ㅋㅋ";

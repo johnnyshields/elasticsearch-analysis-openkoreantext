@@ -15,7 +15,7 @@ import java.io.Reader;
 public class OpenKoreanTextNormalizerFactory extends AbstractCharFilterFactory {
 
     public OpenKoreanTextNormalizerFactory(IndexSettings indexSettings, Environment env, String name, Settings settings) {
-        super(indexSettings, name);
+        super(name);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class OpenKoreanTextNormalizerFactory extends AbstractCharFilterFactory {
 
     public static class OpenKoreanTextStemmerFactory extends AbstractTokenFilterFactory {
         public OpenKoreanTextStemmerFactory(IndexSettings indexSettings, Environment env, String name, Settings settings) {
-            super(indexSettings, name, settings);
+            super(name);
         }
 
         @Override
