@@ -1,5 +1,5 @@
 group 'org.openkoreantext'
-version '9.1.4.0'
+version '9.4.2.0'
 
 apply plugin: 'java'
 apply plugin: 'maven-publish'
@@ -23,7 +23,7 @@ configurations {
 }
 
 ext {
-    elasticsearchVersion = '9.1.4'
+    elasticsearchVersion = '9.4.2'
     openKoreanTextVersion = '2.3.1'
 }
 
@@ -45,7 +45,7 @@ task makePluginDescriptor(type: Copy) {
             'name': 'analysis-openkoreantext',
             'classname': 'org.elasticsearch.plugin.analysis.openkoreantext.AnalysisOpenKoreanTextPlugin',
             'description': 'Korean analysis plugin integrates open-korean-text module into elasticsearch.',
-            'version': '9.1.4',
+            'version': '9.4.2',
             'javaVersion': java.sourceCompatibility,
             'elasticsearchVersion' : elasticsearchVersion
         ]
